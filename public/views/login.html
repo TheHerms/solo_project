@@ -1,0 +1,37 @@
+<!-- Consider this the main view -->
+
+<!-- Shown for users that are NOT logged in -->
+<section ng-hide="auth.loggedIn">
+  <!-- I got this button image from Googles sign-in button brand guidelines page -->
+  <a href= "/auth/google"><img src="/public/assets/btn_google_signin_dark_normal_web.png" /></a>
+</section>
+<!-- Shown for users that are logged in -->
+<!-- <div class="course">
+  <h2>Login Page</h2>
+  <form class="faves">
+    <p>Hello, Friend!</p>
+    <label for="courseName"> Course Name</label>
+    <input ng-model="favorites.list.courseName"  type="text" name="course name"
+     placeholder="add course here">
+
+    <label for="review">Review</label>
+    <input ng-model="favorites.review" type="text" name=review
+     placeholder="add course description/review here">
+
+    <label for="pros">Pros</label>
+    <input ng-model="favorites.pros" type="text" name=pros
+     placeholder="add what you like about the course here">
+
+    <label for="cons">Cons</label>
+    <input ng-model="favorites.cons" type="text" name=cons
+     placeholder="add what you didn't like about the course here"> <br />
+
+    <p>
+      {{favorites.list.courseName}}
+
+    </p>
+    <button class="btn btn-primary" ng-click="nav">Add To List</button>
+
+  </form>
+
+</div> -->

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Golf Course Rater</title>
+    <script src="/public/vendors/angular.min.js"></script>
+    <script src="/public/vendors/angular-route.min.js"></script>
+    <script src="/public/scripts/app.js"></script>
+    <script src="/public/scripts/services/authFactory.js"></script>
+    <script src="/public/scripts/services/FavoritesService.js"></script>
+    <script src="/public/scripts/controllers/navController.js"></script>
+    <script src="/public/scripts/controllers/authController.js"></script>
+    <script src="/public/scripts/controllers/favoritesController.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/vendors/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/public/vendors/skeleton.css" />
+    <link rel="stylesheet" href="/public/styles/index.css" />
+
+  </head>
+  <body>
+    <!-- Bring in the Angular app -->
+    <main class="container" ng-app="faveCourseApp">
+      <!-- NavController is on every page -->
+      <header ng-controller="NavController as nav">
+        <h1>My Golf Course Rater</h1>
+        <nav class="navs">
+          <ul class="row" style="list-style-type: none;">
+            <li class="four columns"><a href="#home">Home</a></li>
+            <li class="four columns" ><a href="#favorites">Favorites</a></li>
+            <!-- <li class="four columns"><a href="#bucketList">Bucket List</a></li> -->
+            <li class="four columns" ><a href="#" ng-click="nav.logout()">Logout</a></li>
+            <!-- ng-show="nav.displayLogout">Welcome {{nav.username}}!  -->
+          </ul>
+        </nav>
+        <!-- Show a helpful message when needed -->
+        <div ng-show="nav.displayLogout">Welcome {{nav.username}}!  </div>
+
+        <section id="message" class="nav.message.type" ng-show="nav.message.text">
+          {{nav.message.text}}
+        </section>
+      </header>
+      <!-- Pull in views via ngRoutes here -->
+      <ng-view></ng-view>
+    </main>
+  </body>
+</html>

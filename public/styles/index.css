@@ -1,0 +1,80 @@
+html {
+  background-image: url(http://www.masters.com/images/apps/slates/slate_channel7.jpg);
+}
+body {
+  margin: 0;
+  padding: 0;
+  /*background: #ccc;*/
+  font-family: 'Anton', sans-serif;
+}
+
+ html, h1, h2, p {
+  color: yellow;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-weight: bolder;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+
+.message{
+  text-align: center;
+}
+.faves {
+    display: inline-block;
+    /*text-align: center;*/
+    }
+
+.navs ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.navs li {
+  /*font-family: 'Oswald', sans-serif;*/
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+.navs a {
+  text-decoration: none;
+  color: yellow;
+  display: block;
+  transition: .3s background-color;
+  font-size: 1.0em;
+}
+
+.navs a:hover {
+  background-color: pink;
+}
+
+.navs a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+.navs li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+.navs li {
+    display: inline-block;
+    margin-right: -4px;
+  }

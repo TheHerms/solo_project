@@ -1,0 +1,35 @@
+<h2>Favorite Golf Courses</h2>
+
+<div class="course">
+  <!-- <h2>Login Page</h2> -->
+  <form class="faves">
+    <p>Hello, Friend!</p>
+    <label for="courseName"> Course Name</label>
+    <input ng-model="favorites.courseName"  type="text" name="course name"
+     placeholder="add course here">
+
+    <label for="review">Review</label>
+    <input ng-model="favorites.review" type="text" name=review
+     placeholder="add course description/review here">
+
+    <label for="pros">Pros</label>
+    <input ng-model="favorites.pros" type="text" name=pros
+     placeholder="add what you like about the course here">
+
+    <label for="cons">Cons</label>
+    <input ng-model="favorites.cons" type="text" name=cons
+     placeholder="add what you didn't like about the course here"> <br />
+
+    <p>
+      {{favorites.courseName}}
+      {{favorites.review}}
+      {{favorites.pros}}
+      {{favorites.cons}}
+
+
+    </p>
+    <button class="btn btn-primary" ng-click="nav">Add To List</button>
+
+  </form>
+
+</div>
