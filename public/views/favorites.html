@@ -1,35 +1,55 @@
-<h2>Favorite Golf Courses</h2>
+<!-- <h2>Favorite Golf Courses</h2> -->
 
 <div class="course">
   <!-- <h2>Login Page</h2> -->
-  <form class="faves">
-    <p>Hello, Friend!</p>
-    <label for="courseName"> Course Name</label>
-    <input ng-model="favorites.courseName"  type="text" name="course name"
-     placeholder="add course here">
+  <section id="courseSubmission">
 
-    <label for="review">Review</label>
-    <input ng-model="favorites.review" type="text" name=review
-     placeholder="add course description/review here">
+    <form class="faves">
 
-    <label for="pros">Pros</label>
-    <input ng-model="favorites.pros" type="text" name=pros
-     placeholder="add what you like about the course here">
+      <!-- <p>Hello, Friend!</p> -->
+      <label for="courseName"> Course Name</label>
+      <input ng-model="favorites.addedFavorite.courseName"  type="text" name="course name"
+      placeholder="add course here">
 
-    <label for="cons">Cons</label>
-    <input ng-model="favorites.cons" type="text" name=cons
-     placeholder="add what you didn't like about the course here"> <br />
+      <label for="review">Review</label>
+      <input ng-model="favorites.addedFavorite.review" type="text" name="review"
+      placeholder="add course description/review here">
 
-    <p>
-      {{favorites.courseName}}
-      {{favorites.review}}
-      {{favorites.pros}}
-      {{favorites.cons}}
+      <label for="pros">Pros</label>
+      <input ng-model="favorites.addedFavorite.pros" type="text" name="pros"
+      placeholder="add what you like about the course here">
 
+      <label for="cons">Cons</label>
+      <input ng-model="favorites.addedFavorite.cons" type="text" name="cons"
+      placeholder="add what you didn't like about the course here"> <br />
 
-    </p>
-    <button class="btn btn-primary" ng-click="nav">Add To List</button>
+      <button class="btn btn-primary" ng-click="favorites.addUserFavorites(addedFavorite)">Add To List</button>
 
-  </form>
+      <!-- <p>
+        {{favorites.addedFavorite.courseName}} Review:
+        {{favorites.addedFavorite.review}} Pros:
+        {{favorites.addedFavorite.pros}} Cons:
+        {{favorites.addedFavorite.cons}}
+      </p> -->
 
+    </form>
+  </section>
+
+  <section>
+    <h2>Favorite Course List</h2>
+    <div id="favoriteCourseList">
+      <div class="favArray"  ng-repeat="favorites in favorites.array">
+        {{favorites}}
+        
+      </div>
+    </div>
+  </section>
 </div>
+
+ <style>
+body {
+text-align: center;
+/*background: url("/public/assets/golf_hole.jpg") no-repeat center center fixed;*/
+/*background-size: cover;*/
+}
+</style>

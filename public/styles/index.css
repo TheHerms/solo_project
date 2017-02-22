@@ -1,62 +1,65 @@
 html {
-  background-image: url(http://www.masters.com/images/apps/slates/slate_channel7.jpg);
+  /*background-image: url(http://www.masters.com/images/apps/slates/slate_channel7.jpg);*/
 }
 body {
   margin: 0;
   padding: 0;
-  /*background: #ccc;*/
+  background: #ccc;
   font-family: 'Anton', sans-serif;
 }
 
  html, h1, h2, p {
-  color: yellow;
+  color: purple;
 }
 
-h1 {
+h1, h2, p, .message {
   text-align: center;
 }
-
+span {
+  color: #dd2a6c;
+  font-family: cursive;
+  font-weight: bold;
+}
 h2 {
   font-weight: bolder;
-  text-align: center;
-}
-p {
-  text-align: center;
 }
 
-.message{
-  text-align: center;
+input:focus, input:hover {
+  background-color: #12eda4;
 }
 .faves {
     display: inline-block;
     /*text-align: center;*/
+    width: 50%;
     }
-
+.navs {
+  max-width: 960px;
+}
 .navs ul {
   list-style: none;
   background-color: #444;
-  text-align: center;
+  text-align: left;
   padding: 0;
   margin: 0;
 }
 .navs li {
-  /*font-family: 'Oswald', sans-serif;*/
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
+  line-height: 50px;
+  height: 20px;
   border-bottom: 1px solid #888;
 }
 
 .navs a {
   text-decoration: none;
-  color: yellow;
+  color: #1f6fef;
   display: block;
   transition: .3s background-color;
-  font-size: 1.0em;
+  font-size: .75em;
 }
 
 .navs a:hover {
-  background-color: pink;
+  background-color: #12bc34;
 }
 
 .navs a.active {
@@ -76,5 +79,5 @@ p {
 
 .navs li {
     display: inline-block;
-    margin-right: -4px;
+    /*margin-right: -4px;*/
   }

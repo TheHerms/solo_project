@@ -29,6 +29,7 @@ var UserService = {
     user.googleToken = token;
     user.googleName = name;
     user.googleEmail = email;
+    
 
     user.save(function (err) {
       if (err) {

@@ -10,7 +10,12 @@ googleAuthApp.config(['$routeProvider', function ($routeProvider) {
     })
     .when('/favorites', {
       templateUrl: '/public/views/favorites.html',
-      controller: 'FavoritesController as favorites'
+      controller: 'FavoritesController as favorites',
+      // controllerAs: 'favorites',
+    })
+    .when('/bucketList', {
+      templateUrl: '/public/views/bucketList.html',
+      controller: 'BucketListController as bl',
       // controllerAs: 'favorites',
     })
     .otherwise({
