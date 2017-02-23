@@ -3,45 +3,59 @@
 <div class="course">
   <!-- <h2>Login Page</h2> -->
   <section id="courseSubmission">
+    <form class="form-horizontal">
 
-    <form class="faves">
-
-      <!-- <p>Hello, Friend!</p> -->
+    <div class="form-group">
       <label for="courseName"> Course Name</label>
       <input ng-model="favorites.addedFavorite.courseName"  type="text" name="course name"
       placeholder="add course here">
+    </div>
 
+    <div class="form-group">
       <label for="review">Review</label>
-      <input ng-model="favorites.addedFavorite.review" type="text" name="review"
-      placeholder="add course description/review here">
+      <textarea ng-model="favorites.addedFavorite.review" type="text" name="review"
+      placeholder="add course description/review here"></textarea>
+    </div>
 
+    <div class="form-group">
       <label for="pros">Pros</label>
       <input ng-model="favorites.addedFavorite.pros" type="text" name="pros"
       placeholder="add what you like about the course here">
+    </div>
 
+    <div class="form-group">
       <label for="cons">Cons</label>
       <input ng-model="favorites.addedFavorite.cons" type="text" name="cons"
       placeholder="add what you didn't like about the course here"> <br />
-
+    <!-- </div> -->
       <button class="btn btn-primary" ng-click="favorites.addUserFavorites(addedFavorite)">Add To List</button>
 
-      <!-- <p>
-        {{favorites.addedFavorite.courseName}} Review:
-        {{favorites.addedFavorite.review}} Pros:
-        {{favorites.addedFavorite.pros}} Cons:
-        {{favorites.addedFavorite.cons}}
-      </p> -->
-
-    </form>
+    </div>
+  </form>
   </section>
 
   <section>
     <h2>Favorite Course List</h2>
     <div id="favoriteCourseList">
-      <div class="favArray"  ng-repeat="favorites in favorites.array">
-        {{favorites}}
-        
-      </div>
+      <!-- <div class="favArray"  ng-repeat="favorites in favorites.array"> -->
+      <table>
+        <thead>
+          <tr>
+            <th>Course Name:</th>
+            <th>Review:</th>
+            <th>Pros:</th>
+            <th>Cons:</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="favorites in favorites.array">
+            <td>{{favorites.favorites[0].courseName}}</td>
+            <td> {{favorites.favorites[0].review}}</td>
+            <td>{{favorites.favorites[0].pros}}</td>
+            <td>{{favorites.favorites[0].cons}}</td>
+        </tr>
+      </tbody>
+    </table>
     </div>
   </section>
 </div>
@@ -49,7 +63,8 @@
  <style>
 body {
 text-align: center;
-/*background: url("/public/assets/golf_hole.jpg") no-repeat center center fixed;*/
-/*background-size: cover;*/
+/*background: url(/public/assets/hole16masters2.jpg) no-repeat center center fixed;*/
+background-size: cover;
+/*opacity: 0.8px;*/
 }
 </style>

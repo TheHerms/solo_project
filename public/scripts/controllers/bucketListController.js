@@ -1,2 +1,4 @@
-googleAuthApp.controller('BucketListController', function (AuthFactory) {
-});
+// googleAuthApp.controller('BucketListController', function (BucketService) {
+//
+//
+// });
