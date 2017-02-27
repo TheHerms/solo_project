@@ -22,7 +22,7 @@ var FavoriteService = {
   //   });
   // },
 
-  createFavorites: function (googleEmail, courseName, review, pros, cons) {
+  createFavorites: function (googleEmail, courseName, location, courseType, courseLayout, highlight, courseConditions, price, value, recommend) {
     var favorite = new Favorite();
 
 

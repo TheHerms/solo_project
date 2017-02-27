@@ -1,62 +1,115 @@
 
 body {
-  background: #ccc;
+  /*background: #ccc;*/
   font-family: 'Anton', sans-serif;
+  /*opacity: 0.8;*/
 }
-
- html, h1, h2, p, label, .favArray {
-  color: yellow;
+h1.mainPage {
+  color: blue;
 }
-
-h1, h2, {
+h1 {
+  color: red;
   text-align: center;
 }
-
-.course{
-  /*background-color: gray;*/
-  opacity: 0.8px;
-  /*width: 50%;*/
+#login{
+  color: green;
 }
-table{
+h2 {
+  /*text-align: center;*/
+  text-decoration: underline;
+}
+strong {
+  color: yellow;
+}
+.alert {
+    padding: 20px;
+    background-color: #589634;
+    color: black;
+    opacity: 0.9;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    width: 30%;
+    display: inline-block;
+    /*padding-left: 15%;*/
+    /*padding-right: 15%;*/
+}
+
+label{
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+#courseSubmission, .bucketForm{
+  width:70%;
+  margin-left:15%;
+  margin-right:15%;
+  margin-top: 10%;
+  /*margin: 30px;*/
+  background-color: #707650;
+  border: 1px solid black;
+  opacity: 1.0;
+}
+#courseSubmission{
+  text-align: left;
+  padding-left: 160px;
+}
+.bucketForm {
+  /*width:70%;
+  margin-left:15%;
+  margin-right:15%;*/
+  background-color: #707650;
   text-align: left;
 }
-table, th , td  {
+.buckCourse{
+  color: black;
+}
+textarea {
+  width: 300px;
+}
+.favoriteCourseTable, .bucketCourses{
+  text-align: left;
+  width:70%;
+  margin-left:15%;
+  margin-right:15%;
+}
+.favoriteCourseTable, .bucketCourses, th , td  {
   border: 3px solid grey;
   border-collapse: collapse;
   border-radius: 5px;
   padding: 5px;
 }
+
 th {
-  background-color: red;
-  /*color: yellow;*/
-  /*text-align: center;*/
   padding-right: 80px;
   border-bottom: 10px;
 }
 table tr:nth-child(odd) {
-  background-color: #f6ff07;
-  /*color is yellow*/
+  background-color: #aabfe2;
+  opacity: 0.9;
+
 }
 table tr:nth-child(even) {
-  background-color: #07ff4d;
-/*color is green*/
+  background-color: #91888b;
+  /*opacity: 0.9;*/
 }
 
-/*.favArray {
-  font-size: 24px;
-  font-family: fantasy;
-  font-weight: bold;
-}*/
 h2 {
   font-weight: bolder;
 }
 input{
-  width: 200px;
+  /*width: 200px;*/
 }
 input:focus, input:hover {
   background-color: #12eda4;
 }
-
+textarea:focus, textarea:hover {
+  background-color: #12eda4;
+}
+.cType:focus, .cType:hover {
+  background-color: #12eda4;
+}
 .faves {
     display: inline-block;
     /*text-align: center;*/
@@ -66,7 +119,8 @@ input:focus, input:hover {
   /*max-width: 800px;*/
 }
 .navs ul {
-  background-color: #444;
+  /*background-color: #444;*/
+  background-color: black;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -81,7 +135,7 @@ input:focus, input:hover {
 
 .navs a {
   text-decoration: none;
-  color: #0c820a;
+  color: yellow;
   display: block;
   transition: .3s background-color;
   font-size: 20px;
@@ -89,7 +143,7 @@ input:focus, input:hover {
 }
 
 .navs a:hover {
-  background-color: yellow;
+  background-color: gray;
 }
 
 .navs a.active {

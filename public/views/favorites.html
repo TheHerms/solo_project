@@ -1,70 +1,120 @@
-<!-- <h2>Favorite Golf Courses</h2> -->
-
 <div class="course">
-  <!-- <h2>Login Page</h2> -->
+  <div class="form-group">
   <section id="courseSubmission">
+    <h2>Favorite Course List</h2>
     <form class="form-horizontal">
 
-    <div class="form-group">
-      <label for="courseName"> Course Name</label>
-      <input ng-model="favorites.addedFavorite.courseName"  type="text" name="course name"
-      placeholder="add course here">
-    </div>
+      <div class="form-group row col-lg-12">
+        <label for="courseName">Course Name:</label>
+        <input ng-model="favorites.addedFavorite.courseName"  type="text" name="course name"
+        placeholder="add course here">
 
-    <div class="form-group">
-      <label for="review">Review</label>
-      <textarea ng-model="favorites.addedFavorite.review" type="text" name="review"
-      placeholder="add course description/review here"></textarea>
-    </div>
+        <label for="location">Location:</label>
+        <input ng-model="favorites.addedFavorite.location"  type="text" name="location"
+        placeholder="add location here">
+      <!-- </div> -->
+      <label for="courseType">Course Type:</label>
+      <select class="cType" ng-model="favorites.addedFavorite.courseType"  >
+        <option>Public (Open to anyone)</option>
+        <option>Private (Must be a member)</option>
+        <option>Resort (Must be staying at Hotel/Resort)</option>
+      </select>
+      </div>
 
-    <div class="form-group">
-      <label for="pros">Pros</label>
-      <input ng-model="favorites.addedFavorite.pros" type="text" name="pros"
-      placeholder="add what you like about the course here">
-    </div>
+      <div class="form-group row col-lg-12">
+      <label for="courseLayout">Course Layout:</label>
+      <select class="cType" ng-model="favorites.addedFavorite.courseLayout">
+        <option>Fair (Enjoyable for all types of golfers)</option>
+        <option>Challenging (Tough but enjoyable for most golfers)</option>
+        <option>Hard (Tough and not as enjoyable)</option>
+      </select>
 
-    <div class="form-group">
-      <label for="cons">Cons</label>
-      <input ng-model="favorites.addedFavorite.cons" type="text" name="cons"
-      placeholder="add what you didn't like about the course here"> <br />
-    <!-- </div> -->
-      <button class="btn btn-primary" ng-click="favorites.addUserFavorites(addedFavorite)">Add To List</button>
+      <label for="highlight">Favorite Hole:</label>
+        <input ng-model="favorites.addedFavorite.highlight" type="text" name="highlight"
+        placeholder="add highlight here">
+      </div>
 
-    </div>
-  </form>
+      <div class="form-group row col-lg-12">
+
+      <!-- </div> -->
+      <label for="courseConditions">Course Conditions:</label>
+      <select class="cType" ng-model="favorites.addedFavorite.courseConditions">
+        <option>Great</option>
+        <option>Good</option>
+        <option>Fair</option>
+      </select>
+
+      <label for="price">Price:</label>
+      <select class="cType" ng-model="favorites.addedFavorite.price">
+        <option>$$$$ ($250++)</option>
+        <option>$$$ ($175-$250)</option>
+        <option>$$ ($100-$175)</option>
+        <option>$ ($100 and under)</option>
+      </select>
+
+      <label for="value">Value:</label>
+      <select class="cType" ng-model="favorites.addedFavorite.value">
+        <option>Not worth the price</option>
+        <option>Expensive but worth it</option>
+        <option>Good Price, Good Value</option>
+      </select>
+
+        </div>
+            <label for="recommend">Review:</label>
+            <textarea ng-model="favorites.addedFavorite.recommend" type="text" name="recommend"
+            placeholder="add text here"></textarea>
+
+            <br />
+        <button class="btn btn-primary" ng-click="favorites.addUserFavorites(addedFavorite)">Add To List</button>
+        </div>
+
+      </div>
+    </form>
   </section>
 
   <section>
-    <h2>Favorite Course List</h2>
-    <div id="favoriteCourseList">
-      <!-- <div class="favArray"  ng-repeat="favorites in favorites.array"> -->
-      <table>
+    <!-- <h2>Favorite Course List</h2> -->
+    <div>
+      <table class="favoriteCourseTable">
         <thead>
           <tr>
+            <th></th>
             <th>Course Name:</th>
+            <th>Location:</th>
+            <th>Course Type:</th>
+            <th>Course Layout:</th>
+            <th>Favorite Hole:</th>
+            <th>Course Conditions:</th>
+            <th>Price:</th>
+            <th>Value:</th>
             <th>Review:</th>
-            <th>Pros:</th>
-            <th>Cons:</th>
           </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="favorites in favorites.array">
+          <tr ng-repeat="favorites in favorites.array">
+            <td>{{ $index + 1 }}</td>
             <td>{{favorites.favorites[0].courseName}}</td>
-            <td> {{favorites.favorites[0].review}}</td>
-            <td>{{favorites.favorites[0].pros}}</td>
-            <td>{{favorites.favorites[0].cons}}</td>
-        </tr>
-      </tbody>
-    </table>
+            <td>{{favorites.favorites[0].location}}</td>
+            <td>{{favorites.favorites[0].courseType}}</td>
+            <td>{{favorites.favorites[0].courseLayout}}</td>
+            <td>{{favorites.favorites[0].highlight}}</td>
+            <td>{{favorites.favorites[0].courseConditions}}</td>
+            <td>{{favorites.favorites[0].price}}</td>
+            <td>{{favorites.favorites[0].value}}</td>
+            <td>{{favorites.favorites[0].recommend}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     </div>
   </section>
 </div>
 
- <style>
+<style>
 body {
-text-align: center;
-/*background: url(/public/assets/hole16masters2.jpg) no-repeat center center fixed;*/
-background-size: cover;
-/*opacity: 0.8px;*/
+  text-align: center;
+  background: url(/public/assets/amencorner.jpg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.5px;
 }
 </style>

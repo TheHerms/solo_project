@@ -19,8 +19,10 @@ googleAuthApp.service('FavoritesService', function ($http) {
       return res.data;
     }).catch(function(err){
       console.log('Got an error from the post', err);
+
     });
+  
   };
 
-  
+
 });

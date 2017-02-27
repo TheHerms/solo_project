@@ -15,8 +15,8 @@ googleAuthApp.config(['$routeProvider', function ($routeProvider) {
     })
     .when('/bucketList', {
       templateUrl: '/public/views/bucketList.html',
-      controller: 'BucketListController as bl',
-      // controllerAs: 'favorites',
+      controller: 'BucketListController as buckets',
+
     })
     .otherwise({
       redirectTo: 'login',

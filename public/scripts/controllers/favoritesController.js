@@ -3,7 +3,7 @@ googleAuthApp.controller('FavoritesController', function (FavoritesService) {
   var ctrl = this;
   ctrl.data = '';
   ctrl.array = [];
-  ctrl.addedFavorite = {googleEmail:"", courseName:"", review:"", pros:"", cons:""};
+  ctrl.addedFavorite = {googleEmail:"", courseName:"", location:"", courseType:"", courseLayout:"", highlight:"", courseConditions:"", price:"", value:"", recommend:"", };
 
   ctrl.getUserFavorites = function(){
     FavoritesService.getUserFavorites().then(function(res){
@@ -18,8 +18,9 @@ googleAuthApp.controller('FavoritesController', function (FavoritesService) {
     // ctrl.list.courseName = addedFavorite.courseName;
     FavoritesService.addUserFavorites(ctrl.addedFavorite).then(function(res){
       console.log("We getting a response", res);
-      // ctrl.getUserFavorites();
+
     });
+    ctrl.getUserFavorites();
   };
 
 });

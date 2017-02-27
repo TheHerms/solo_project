@@ -7,9 +7,12 @@
     <script src="/public/scripts/app.js"></script>
     <script src="/public/scripts/services/authFactory.js"></script>
     <script src="/public/scripts/services/FavoritesService.js"></script>
+    <script src="/public/scripts/services/BucketService.js"></script>
+
     <script src="/public/scripts/controllers/navController.js"></script>
     <script src="/public/scripts/controllers/authController.js"></script>
     <script src="/public/scripts/controllers/favoritesController.js"></script>
+    <script src="/public/scripts/controllers/bucketListController.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/public/vendors/normalize.css" />
@@ -30,7 +33,7 @@
             <li class="pull-left"><a href="#bucketList">Bucket List</a></li>
             <li class="pull-right"><a href="#" ng-click="nav.logout()">Logout</a></li>
           </ul>
-          <h1>My Golf Course Rater</h1>
+          <!-- <p class="navbar-text">Some text</p> -->
 
         </nav>
         <!-- Show a helpful message when needed -->
@@ -40,6 +43,7 @@
           {{nav.message.text}}
         </section> -->
       </header>
+      <h1 class="mainPage">My Golf Course Rater</h1>
       <!-- Pull in views via ngRoutes here -->
       <ng-view></ng-view>
     </main>

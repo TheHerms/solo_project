@@ -21,13 +21,17 @@ router.post('/', function (req, res) {
 
   var favorite = new Favorite();
   favorite.googleEmail = req.user.googleEmail;
-  // req.body.googleEmail = req.user.googleEmail;
   var courseName = req.body.courseName;
-  var review = req.body.review;
-  var pros = req.body.pros;
-  var cons = req.body.cons;
+  var location = req.body.location;
+  var courseType = req.body.courseType;
+  var courseLayout = req.body.courseLayout;
+  var highlight = req.body.highlight;
+  var courseConditions = req.body.courseConditions;
+  var price = req.body.price;
+  var value = req.body.value;
+  var recommend = req.body.recommend;
   var favoriteArray = new Array();
-  favoriteArray.push({'courseName': courseName, 'review': review, 'pros': pros, 'cons': cons});
+  favoriteArray.push({'courseName': courseName, 'location': location, 'courseType': courseType, 'courseLayout': courseLayout, 'highlight': highlight, 'courseConditions': courseConditions, 'price': price, 'value': value, 'recommend': recommend,});
   console.log('favoriteArray', favoriteArray);
   favorite.favorites = favoriteArray;
 

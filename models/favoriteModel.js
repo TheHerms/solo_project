@@ -3,9 +3,14 @@ var mongoose = require('mongoose');
 
 
 var favoriteArray = mongoose.Schema({courseName: String,
-review: String,
-pros: String,
-cons: String
+location: String,
+courseType: String,
+courseLayout: String,
+highlight: String,
+courseConditions: String,
+price: String,
+value: String,
+recommend: String
 });
 
 var favoriteSchema = mongoose.Schema({

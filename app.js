@@ -11,6 +11,7 @@ var isLoggedIn = require('./utils/auth');
 var private = require('./routes/private/index');
 var database = require('./utils/database');
 var favorites = require('./routes/private/favorites');
+var buckets = require('./routes/private/buckets');
 /** ---------- EXPRESS APP CONFIG ---------- **/
 var app = express();
 app.use('/public', express.static('public'));  // serve files from public
@@ -45,6 +46,7 @@ app.use('/auth', auth);
 app.use('/private', isLoggedIn, private);
 app.use('/', index);
 app.use('/favorites', favorites);
+app.use('/buckets', buckets);
 /** ---------- SERVER START ---------- **/
 app.listen(3000, function () {
   console.log('Now running on port ', 3000);
