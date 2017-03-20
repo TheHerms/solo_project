@@ -22,7 +22,7 @@ var FavoriteService = {
   //   });
   // },
 
-  createFavorites: function (googleEmail, courseName, location, courseType, courseLayout, highlight, courseConditions, price, value, recommend) {
+  createFavorites: function (googleEmail, courseName, location, courseType, courseLayout, highlight, courseConditions, price, value, recommend, rating) {
     var favorite = new Favorite();
 
 

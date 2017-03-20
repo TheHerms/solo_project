@@ -5,11 +5,9 @@ body {
   /*opacity: 0.8;*/
 }
 h1.mainPage {
-  color: blue;
-}
-h1 {
-  color: red;
-  text-align: center;
+  font-size: 56px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 #login{
   color: green;
@@ -30,6 +28,7 @@ strong {
     margin-bottom: 15px;
     width: 30%;
     display: inline-block;
+    box-shadow: 10px 10px;
     /*padding-left: 15%;*/
     /*padding-right: 15%;*/
 }
@@ -54,6 +53,7 @@ label{
 #courseSubmission{
   text-align: left;
   padding-left: 160px;
+  box-shadow: 10px 10px;
 }
 .bucketForm {
   /*width:70%;
@@ -165,3 +165,6 @@ textarea:focus, textarea:hover {
     display: inline-block;
     /*margin-right: -4px;*/
   }
+  .rating {
+    float:left;
+}

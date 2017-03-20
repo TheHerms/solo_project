@@ -10,7 +10,7 @@ highlight: String,
 courseConditions: String,
 price: String,
 value: String,
-recommend: String
+recommend: String,
 });
 
 var favoriteSchema = mongoose.Schema({

@@ -22,5 +22,12 @@ googleAuthApp.controller('FavoritesController', function (FavoritesService) {
     });
     ctrl.getUserFavorites();
   };
+  ctrl.deleteFavorites = function(id){
+    FavoritesService.deleteFavorites(id).then(function(res){
+      ctrl.res = res.data;
+      console.log('Post Delete bike list:', ctrl.resList);
+
+    })
+  }
 
 });

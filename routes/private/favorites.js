@@ -31,7 +31,8 @@ router.post('/', function (req, res) {
   var value = req.body.value;
   var recommend = req.body.recommend;
   var favoriteArray = new Array();
-  favoriteArray.push({'courseName': courseName, 'location': location, 'courseType': courseType, 'courseLayout': courseLayout, 'highlight': highlight, 'courseConditions': courseConditions, 'price': price, 'value': value, 'recommend': recommend,});
+  favoriteArray.push({'courseName': courseName, 'location': location, 'courseType': courseType, 'courseLayout': courseLayout, 'highlight': highlight, 'courseConditions': courseConditions,
+  'price': price, 'value': value, 'recommend': recommend});
   console.log('favoriteArray', favoriteArray);
   favorite.favorites = favoriteArray;
 

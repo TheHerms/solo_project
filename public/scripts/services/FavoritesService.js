@@ -21,8 +21,11 @@ googleAuthApp.service('FavoritesService', function ($http) {
       console.log('Got an error from the post', err);
 
     });
-  
-  };
 
+  };
+  this.deleteFavorites = function (id) {
+    $http.delete('/favorites/' + id);
+    return $http.get('/favorites');
+  };
 
 });
