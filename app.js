@@ -48,6 +48,6 @@ app.use('/', index);
 app.use('/favorites', favorites);
 app.use('/buckets', buckets);
 /** ---------- SERVER START ---------- **/
-app.listen(3000, function () {
-  console.log('Now running on port ', 3000);
+app.listen(4000, function () {
+  console.log('Now running on port ', 4000);
 });
