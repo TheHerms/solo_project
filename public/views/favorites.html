@@ -1,66 +1,66 @@
 <div class="course">
   <div class="form-group">
-  <section id="courseSubmission">
-    <h2>Favorite Course List</h2>
-    <form class="form-horizontal">
+    <section id="courseSubmission">
+      <h2>Favorite Course List</h2>
+      <form class="form-horizontal">
 
-      <div class="form-group row col-md-12 col col-lg-12">
-        <label for="courseName">Course Name:</label>
-        <input ng-model="favorites.addedFavorite.courseName"  type="text" name="course name"
-        placeholder="add course here">
+        <div class="form-group row col-md-12 col col-lg-12">
+          <label for="courseName">Course Name:</label>
+          <input ng-model="favorites.addedFavorite.courseName"  type="text" name="course name"
+          placeholder="add course here">
 
-        <label for="location">Location:</label>
-        <input ng-model="favorites.addedFavorite.location"  type="text" name="location"
-        placeholder="add location here">
-      </div>
+          <label for="location">Location:</label>
+          <input ng-model="favorites.addedFavorite.location"  type="text" name="location"
+          placeholder="add location here">
+        </div>
 
-      <div class="form-group row col-md-12 col col-lg-12">
-        <label for="courseType">Course Type:</label>
-        <select class="cType" ng-model="favorites.addedFavorite.courseType"  >
-          <option>Public (Open to anyone)</option>
-          <option>Private (Must be a member)</option>
-          <option>Resort (Must be staying at Hotel/Resort)</option>
-        </select>
-      </div>
+        <div class="form-group row col-md-12 col col-lg-12">
+          <label for="courseType">Course Type:</label>
+          <select class="cType" ng-model="favorites.addedFavorite.courseType"  >
+            <option>Public (Open to anyone)</option>
+            <option>Private (Must be a member)</option>
+            <option>Resort (Must be staying at Hotel/Resort)</option>
+          </select>
+        </div>
 
-      <div class="form-group row col-md-12 col col-lg-12">
-      <label for="courseLayout">Course Layout:</label>
-        <select class="cType" ng-model="favorites.addedFavorite.courseLayout">
-          <option>Fair (Enjoyable for all types of golfers)</option>
-          <option>Challenging (Tough but enjoyable for most golfers)</option>
-          <option>Hard (Tough and not as enjoyable)</option>
-        </select>
-      </div>
-      <div class="form-group row col-md-12 col col-lg-12">
-      <label for="highlight">Favorite Hole:</label>
-        <input ng-model="favorites.addedFavorite.highlight" type="text" name="highlight"
-        placeholder="add highlight here">
-      </div>
+        <div class="form-group row col-md-12 col col-lg-12">
+          <label for="courseLayout">Course Layout:</label>
+          <select class="cType" ng-model="favorites.addedFavorite.courseLayout">
+            <option>Fair (Enjoyable for all types of golfers)</option>
+            <option>Challenging (Tough but enjoyable for most golfers)</option>
+            <option>Hard (Tough and not as enjoyable)</option>
+          </select>
+        </div>
+        <div class="form-group row col-md-12 col col-lg-12">
+          <label for="highlight">Favorite Hole:</label>
+          <input ng-model="favorites.addedFavorite.highlight" type="text" name="highlight"
+          placeholder="add highlight here">
+        </div>
 
-      <div class="form-group row col-md-12 col col-lg-12">
+        <div class="form-group row col-md-12 col col-lg-12">
 
-      <!-- </div> -->
-      <label for="courseConditions">Course Conditions:</label>
-      <select class="cType" ng-model="favorites.addedFavorite.courseConditions">
-        <option>Great</option>
-        <option>Good</option>
-        <option>Fair</option>
-      </select>
+          <!-- </div> -->
+          <label for="courseConditions">Course Conditions:</label>
+          <select class="cType" ng-model="favorites.addedFavorite.courseConditions">
+            <option>Great</option>
+            <option>Good</option>
+            <option>Fair</option>
+          </select>
 
-      <label for="price">Price:</label>
-      <select class="cType" ng-model="favorites.addedFavorite.price">
-        <option>$$$$ ($250++)</option>
-        <option>$$$ ($175-$250)</option>
-        <option>$$ ($100-$175)</option>
-        <option>$ ($100 and under)</option>
-      </select>
+          <label for="price">Price:</label>
+          <select class="cType" ng-model="favorites.addedFavorite.price">
+            <option>$$$$ ($250++)</option>
+            <option>$$$ ($175-$250)</option>
+            <option>$$ ($100-$175)</option>
+            <option>$ ($100 and under)</option>
+          </select>
 
-      <label for="value">Value:</label>
-      <select class="cType" ng-model="favorites.addedFavorite.value">
-        <option>Not worth the price</option>
-        <option>Expensive but worth it</option>
-        <option>Good Price, Good Value</option>
-      </select>
+          <label for="value">Value:</label>
+          <select class="cType" ng-model="favorites.addedFavorite.value">
+            <option>Not worth the price</option>
+            <option>Expensive but worth it</option>
+            <option>Good Price, Good Value</option>
+          </select>
 
         </div>
 
@@ -68,53 +68,49 @@
         <textarea ng-model="favorites.addedFavorite.recommend" type="text" name="recommend"
         placeholder="add text here"></textarea>
 
-            <br />
+        <br />
         <button class="btn btn-primary" ng-click="favorites.addUserFavorites(addedFavorite)">Add To List</button>
-        </div>
       </div>
-    </form>
-  </section>
-
-  <section>
-    <!-- <h2>Favorite Course List</h2> -->
-    <div>
-      <table class="favoriteCourseTable">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Course Name:</th>
-            <th>Location:</th>
-            <th>Course Type:</th>
-            <th>Course Layout:</th>
-            <th>Favorite Hole:</th>
-            <th>Course Conditions:</th>
-            <th>Price:</th>
-            <th>Value:</th>
-            <th>Review:</th>
-
-
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="favorites in favorites.array">
-            <td>{{ $index + 1 }}</td>
-            <td>{{favorites.favorites[0].courseName}}</td>
-            <td>{{favorites.favorites[0].location}}</td>
-            <td>{{favorites.favorites[0].courseType}}</td>
-            <td>{{favorites.favorites[0].courseLayout}}</td>
-            <td>{{favorites.favorites[0].highlight}}</td>
-            <td>{{favorites.favorites[0].courseConditions}}</td>
-            <td>{{favorites.favorites[0].price}}</td>
-            <td>{{favorites.favorites[0].value}}</td>
-            <td>{{favorites.favorites[0].recommend}}</td>
-            <!-- <td><button ng-click="favorites.deleteFavorites(favorites._id)" class="delete"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></td> -->
-
-          </tr>
-        </tbody>
-      </table>
     </div>
-    </div>
-  </section>
+  </form>
+</section>
+
+<section>
+  <!-- <h2>Favorite Course List</h2> -->
+  <div>
+    <table class="favoriteCourseTable">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Course Name:</th>
+          <th>Location:</th>
+          <th>Course Type:</th>
+          <th>Course Layout:</th>
+          <th>Favorite Hole:</th>
+          <th>Course Conditions:</th>
+          <th>Price:</th>
+          <th>Value:</th>
+          <th>Review:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="favorites in favorites.array">
+          <td>{{ $index + 1 }}</td>
+          <td>{{favorites.favorites[0].courseName}}</td>
+          <td>{{favorites.favorites[0].location}}</td>
+          <td>{{favorites.favorites[0].courseType}}</td>
+          <td>{{favorites.favorites[0].courseLayout}}</td>
+          <td>{{favorites.favorites[0].highlight}}</td>
+          <td>{{favorites.favorites[0].courseConditions}}</td>
+          <td>{{favorites.favorites[0].price}}</td>
+          <td>{{favorites.favorites[0].value}}</td>
+          <td>{{favorites.favorites[0].recommend}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
 </div>
 
 <style>
