@@ -1,0 +1,26 @@
+.favoriteCourseTable {
+  text-align: left;
+  /*width:70%;*/
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #aabfe2;
+}
+.favoriteCourseTable, th , td  {
+  border: 3px solid grey;
+  border-collapse: collapse;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.favoriteCourseTable, th {
+  font-size: 16px;
+}
+/*.favoriteCourseTable tr:nth-child(odd) {
+    background-color: #aabfe2;
+    opacity: 0.9;
+}
+
+.favoriteCourseTable tr:nth-child(even) {
+    background-color: #91888b;
+    opacity: 0.9;
+}*/

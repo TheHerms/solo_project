@@ -1,0 +1,29 @@
+.bucketCourses{
+  text-align: left;
+  background-color: lightgray;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.bucketCourses, th , td  {
+  border: 3px solid grey;
+  border-collapse: collapse;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#bucketInfo {
+  padding-left: 20px;
+}
+
+/*.bucketCourses tr:nth-child(odd) {
+    background-color: #189e06;
+    opacity: 1.0;
+}
+
+.bucketCourses tr:nth-child(even) {
+    background-color: #91888b;
+    opacity: 1.0;
+}*/

@@ -1,174 +1,143 @@
-
 body {
-  /*background: #ccc;*/
-  font-family: 'Anton', sans-serif;
-  /*opacity: 0.8;*/
+    font-family: 'Anton', sans-serif;
+}
+#name {
+    color: ghostwhite;
+    font-size: 24px;
+    font-family: cursive;
+    font-weight: bold;
 }
 h1.mainPage {
-  font-size: 56px;
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
+    font-size: 56px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
-#login{
-  color: green;
+
+#login {
+    color: green;
 }
+
 h2 {
-  /*text-align: center;*/
-  text-decoration: underline;
+    text-decoration: underline;
+    font-weight: bolder;
 }
+
 strong {
-  color: yellow;
+    color: yellow;
 }
+
 .alert {
     padding: 20px;
     background-color: #589634;
     color: black;
     opacity: 0.9;
     transition: opacity 0.6s;
-    margin-bottom: 15px;
-    width: 30%;
+    margin-bottom: 5px;
+    width: auto;
     display: inline-block;
     box-shadow: 10px 10px;
-    /*padding-left: 15%;*/
-    /*padding-right: 15%;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
 }
 
-label{
-  padding-right: 10px;
-  padding-left: 10px;
-  font-weight: bolder;
-  font-size: 22px;
+table {
+    border-radius: 5px;
+    border-bottom: 2px solid black;
 }
 
-#courseSubmission, .bucketForm{
-  width:70%;
-  margin-left:15%;
-  margin-right:15%;
-  margin-top: 10%;
-  /*margin: 30px;*/
-  background-color: #707650;
-  border: 1px solid black;
-  opacity: 1.0;
+label {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 22px;
 }
-#courseSubmission{
-  text-align: left;
-  padding-left: 160px;
-  box-shadow: 10px 10px;
+
+#courseSubmission, .bucketForm {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: lightgray;
+    border: 1px solid black;
+    opacity: 0.95;
 }
-.bucketForm {
-  /*width:70%;
-  margin-left:15%;
-  margin-right:15%;*/
-  background-color: #707650;
-  text-align: left;
+
+#courseSubmission {
+    text-align: left;
+    padding-left: 160px;
+    box-shadow: 10px 10px;
 }
-.buckCourse{
-  color: black;
-}
+
 textarea {
-  width: 300px;
+    width: 300px;
 }
-.favoriteCourseTable, .bucketCourses{
-  text-align: left;
-  width:70%;
-  margin-left:15%;
-  margin-right:15%;
-}
-.favoriteCourseTable, .bucketCourses, th , td  {
-  border: 3px solid grey;
-  border-collapse: collapse;
-  border-radius: 5px;
-  padding: 5px;
-}
-
 th {
-  padding-right: 80px;
-  border-bottom: 10px;
+    text-align: center;
 }
-table tr:nth-child(odd) {
-  background-color: #aabfe2;
-  opacity: 0.9;
-
-}
-table tr:nth-child(even) {
-  background-color: #91888b;
-  /*opacity: 0.9;*/
-}
-
 h2 {
-  font-weight: bolder;
+    font-weight: bolder;
 }
-input{
-  /*width: 200px;*/
-}
+
 input:focus, input:hover {
-  background-color: #12eda4;
+    background-color: #12eda4;
 }
+
 textarea:focus, textarea:hover {
-  background-color: #12eda4;
+    background-color: #12eda4;
 }
+
 .cType:focus, .cType:hover {
-  background-color: #12eda4;
+    background-color: #12eda4;
 }
+
 .faves {
     display: inline-block;
-    /*text-align: center;*/
-    /*width: 50%;*/
-    }
-.navs {
-  /*max-width: 800px;*/
 }
+
 .navs ul {
-  /*background-color: #444;*/
-  background-color: black;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+    background-color: black;
+    /*padding: 5px;*/
+    margin-left: 10px;
+    display: inline-block;
 }
+
 .navs li {
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px;
-  line-height: 50px;
-  height: 50px;
-  border-bottom: 1px solid #888;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    line-height: 50px;
+    height: 50px;
+    border-bottom: 1px solid #888;
 }
 
 .navs a {
-  text-decoration: none;
-  color: yellow;
-  display: block;
-  transition: .3s background-color;
-  font-size: 20px;
-  font-weight: bolder;
+    text-decoration: none;
+    color: yellow;
+    display: block;
+    transition: .3s background-color;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 .navs a:hover {
-  background-color: gray;
+    background-color: gray;
 }
 
 .navs a.active {
-  background-color: #fff;
-  color: #444;
-  cursor: default;
+    background-color: #fff;
+    color: #444;
+    cursor: default;
 }
 
 @media screen and (min-width: 600px) {
-.navs li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 20px;
+    .navs li {
+        width: 200px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+    }
+    .navs li {
+        display: inline-block;
+    }
+    .rating {
+        float: left;
+    }
   }
-
-.navs li {
-    display: inline-block;
-    /*margin-right: -4px;*/
-  }
-  .rating {
-    float:left;
-}
-
-#bucketInfo {
-  padding-left: 20px;
-}

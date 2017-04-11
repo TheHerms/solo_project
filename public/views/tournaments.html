@@ -1,0 +1,60 @@
+<div class="tournamentListPage">
+  <section class="tournamentForm">
+    <div id="tournamentInfo">
+      <h2>Professional Tournaments Attended</h2>
+      <p>
+        What Professional Tournaments have you attended?
+      </p>
+    </div>
+    <form class="tournament form-horizontal">
+      <!-- <div class="buckCourse"> -->
+      <!-- controller: 'TournamentController as tournaments', -->
+      <label for="tournamentName"> Tournament Name:</label>
+      <input ng-model="tournaments.addedTournament.tournamentName" type="text" name="tournament name" placeholder="add name here">
+
+      <label for="courseName"> Course Name:</label>
+      <input ng-model="tournaments.addedTournament.courseName" type="text" name="course name" placeholder="add course here">
+      <!-- <br /> -->
+      <label for="location"> Location:</label>
+      <input ng-model="tournaments.addedTournament.location" type="text" name="course name" placeholder="add location here">
+
+      <label for="date"> Date:</label>
+      <input ng-model="tournaments.addedTournament.date" type="text" name="date" placeholder="Date attended">
+
+
+      <button class="btn btn-primary" ng-click="tournaments.addUserTournaments(addedTournament)">Add To List</button>
+
+      <!-- </section> -->
+    </section>
+  </form>
+  <div>
+    <table class="tournamentCourses">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Tournament Name:</th>
+          <th>Course Name:</th>
+          <th>Location:</th>
+          <th> Date Attended: </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="tournaments in tournaments.array">
+          <td>{{ $index + 1 }}</td>
+          <td>{{tournaments.tournaments[0].tournamentName}}</td>
+          <td>{{tournaments.tournaments[0].courseName}}</td>
+          <td>{{tournaments.tournaments[0].location}}</td>
+          <td>{{tournaments.tournaments[0].date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+body {
+  text-align: center;
+  background: url(/public/assets/OldCourseStAndrews.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+</style>

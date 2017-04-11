@@ -8,18 +8,25 @@
   <script src="/public/scripts/services/authFactory.js"></script>
   <script src="/public/scripts/services/FavoritesService.js"></script>
   <script src="/public/scripts/services/BucketService.js"></script>
+  <script src="/public/scripts/services/TournamentService.js"></script>
 
   <script src="/public/scripts/controllers/navController.js"></script>
   <script src="/public/scripts/controllers/authController.js"></script>
   <script src="/public/scripts/controllers/favoritesController.js"></script>
   <script src="/public/scripts/controllers/bucketListController.js"></script>
+  <script src="/public/scripts/controllers/tournamentController.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/public/vendors/normalize.css" />
   <link rel="stylesheet" type="text/css" href="/public/vendors/bootstrap.min.css" />
+  <script src="/public/vendors/sweetalert.min.js"></script>
   <link rel="stylesheet" href="/public/styles/index.css" />
+  <link rel="stylesheet" href="/public/styles/bucketstyles.css" />
+  <link rel="stylesheet" href="/public/styles/favoritestyles.css" />
+  <link rel="stylesheet" href="/public/styles/tournamentstyles.css" />
   <link rel="shortcut icon" href="public/assets/golficon.png" type="image/x-icon">
   <link rel="stylesheet" href="/public/vendors/font-awesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/public/vendors/sweetalert.css" />
 
 </head>
 <body>
@@ -30,13 +37,14 @@
 
       <nav class="navs">
         <ul class="row" >
-          <li class="pull-left"><a href="#home">Home</a></li>
-          <li class="pull-left"><a href="#favorites">Favorites</a></li>
-          <li class="pull-left"><a href="#bucketList">Bucket List</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#favorites">Favorites</a></li>
+          <li><a href="#bucketList">Bucket List</a></li>
+          <li><a href="#tournaments">  Tournaments</a></li>
           <li class="pull-right"><a href="#" ng-click="nav.logout()">Logout</a></li>
         </ul>
       </nav>
-      <div ng-show="nav.displayLogout">Welcome {{nav.username}}!  </div>
+      <div id="name" ng-show="nav.displayLogout">Welcome {{nav.username}}!  </div>
   </header>
   <h1 class="mainPage">My Golf Course Rater</h1>
   <!-- Pull in views via ngRoutes here -->
