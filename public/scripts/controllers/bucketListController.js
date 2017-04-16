@@ -3,7 +3,7 @@ googleAuthApp.controller('BucketListController', function (BucketService) {
   var ctrl = this;
   ctrl.data = '';
   ctrl.array = [];
-  ctrl.addedBucket = {courseName:"", location:"", whenToGo:""};
+  ctrl.addedBucket = {courseName:"", location:"", date:""};
 
   ctrl.getUserBuckets = function(){
     BucketService.getUserBuckets().then(function(res){

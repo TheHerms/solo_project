@@ -16,7 +16,7 @@ googleAuthApp.service('FavoritesService', function ($http) {
     // console.log( 'we are getting favorites', favorite);
     return $http.post('/favorites', favorite).then(function(res){
       console.log('Response from the post', res);
-      swal("You added a new favorite course to your collection!", "Fore!", "success");
+      swal("You added a new favorite course to your collection!", "Fore!", "Success");
       return res.data;
     }).catch(function(err){
       console.log('Got an error from the post', err);

@@ -5,14 +5,13 @@
   margin-right: auto;
   background-color: #aabfe2;
 }
-.favoriteCourseTable, th , td  {
-  border: 3px solid grey;
+.favoriteCourseTable  {
   border-collapse: collapse;
-  border-radius: 5px;
   padding: 2px;
+  border-style: ridge;
 }
 
-.favoriteCourseTable, th {
+.favoriteCourseTable {
   font-size: 16px;
 }
 /*.favoriteCourseTable tr:nth-child(odd) {

@@ -17,7 +17,7 @@ googleAuthApp.service('TournamentService', function ($http) {
     console.log( 'we are getting tournaments', tournament);
     return $http.post('/tournaments', tournament).then(function(res){
       console.log('Response from the post', res);
-      swal("You added another tournament to your records!", "Yay!", "success");
+      swal("You added another tournament to your records!", "Sweet!", "Success");
       return res.data;
     }).catch(function(err){
       console.log('Got an error from the post', err);

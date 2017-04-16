@@ -40,9 +40,9 @@ strong {
     /*margin-right: auto;*/
 }
 
-table {
-    border-radius: 5px;
-    border-bottom: 2px solid black;
+table, tr {
+    /*border-radius: 5px;*/
+    border-bottom: 4px solid black;
 }
 
 label {

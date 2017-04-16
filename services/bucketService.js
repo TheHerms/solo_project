@@ -22,7 +22,7 @@ var BucketService = {
   //   });
   // },
 
-  createBL: function (googleEmail, courseName, location, whenToGo) {
+  createBL: function (googleEmail, courseName, location, date) {
     var bucket = new Bucket();
 
 

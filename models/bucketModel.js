@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 var bucketArray = mongoose.Schema({courseName: String,
 location: String,
-whenToGo: String});
+date: String});
 
 var bucketSchema = mongoose.Schema({
   googleEmail: String,

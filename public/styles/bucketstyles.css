@@ -7,7 +7,7 @@
   font-size: 24px;
   margin-bottom: 10px;
 }
-.bucketCourses, th , td  {
+.bucketCourses, th  {
   border: 3px solid grey;
   border-collapse: collapse;
   border-radius: 5px;

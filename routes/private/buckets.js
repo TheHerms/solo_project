@@ -25,10 +25,10 @@ router.post('/', function (req, res) {
   // req.body.googleEmail = req.user.googleEmail;
   var courseName = req.body.courseName;
   var location = req.body.location;
-  var whenToGo = req.body.whenToGo;
+  var date = req.body.date;
 
   var bucketArray = new Array();
-  bucketArray.push({'courseName': courseName, 'location': location, 'whenToGo': whenToGo});
+  bucketArray.push({'courseName': courseName, 'location': location, 'date': date});
   console.log('bucketArray', bucketArray);
   bucket.buckets = bucketArray;
 

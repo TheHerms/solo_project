@@ -85,7 +85,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="favorites in favorites.array">
+            <tr ng-repeat="favorites in favorites.array | orderBy:'favorites[0].courseName'">
                 <td>{{ $index + 1 }}</td>
                 <td>{{favorites.favorites[0].courseName}}</td>
                 <td>{{favorites.favorites[0].location}}</td>
@@ -105,7 +105,8 @@
     body {
         text-align: center;
         background: url(/public/assets/amencorner.jpg) no-repeat center center fixed;
+        /*background-color: green;*/
         background-size: cover;
-        opacity: 0.5px;
+        /*background-blend-mode: darken;*/
     }
 </style>

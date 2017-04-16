@@ -17,8 +17,8 @@
       <label for="location"> Location:</label>
       <input ng-model="buckets.addedBucket.location" type="text" name="course name" placeholder="add location here">
 
-      <label for="whenToGo"> Date Planned?</label>
-      <input ng-model="buckets.addedBucket.whenToGo" type="text" name="Date Planned" placeholder="When??">
+      <label for="date"> Date Planned?</label>
+      <input ng-model="buckets.addedBucket.date" type="text" name="Date Planned" placeholder="When??">
 
 
       <button class="btn btn-primary pull-center" ng-click="buckets.addUserBuckets(addedBucket)">Add To List</button>
@@ -37,11 +37,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="buckets in buckets.array">
+        <tr ng-repeat="buckets in buckets.array | orderBy:'buckets[0].date'">
           <td>{{ $index + 1 }}</td>
           <td>{{buckets.buckets[0].courseName}}</td>
           <td>{{buckets.buckets[0].location}}</td>
-          <td>{{buckets.buckets[0].whenToGo}}</td>
+          <td>{{buckets.buckets[0].date}}</td>
         </tr>
       </tbody>
     </table>
